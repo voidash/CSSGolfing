@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.0/build/styles/default.min.css">
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.0/build/highlight.min.js"></script>
+    <title>FlexBox</title>
+</head>
+<body>
+    <h3 class="title">Display Flex</h3>
+    <pre><code class="CSS">
+        .container{
+            display: flex;
+        }
+    </code></pre>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <h3 class="title">Flex Direction Row</h3>
+    <pre><code class="CSS">
+        .container{
+            display: flex;
+            flex-direction: row | row-reverse |
+        }
+    </code></pre>
+    <div class="container flex-direction-row">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    
+    <h3 class="title">Flex Direction Column</h3>
+    <pre><code class="CSS">
+        .container{
+            display: flex;
+            flex-direction: column | column-reverse |
+        }
+    </code></pre>
+    <div class="container flex-direction-column">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    
+    <h3 class="title">Justify Content Center</h3>
+    <pre><code class="CSS">
+        .container{
+            display: flex;
+            flex-direction: row
+            justify-content: startflex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe
+        }
+    </code></pre>
+    <div class="container flex-direction-row justify-content-center">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    
+</body>
+</html>

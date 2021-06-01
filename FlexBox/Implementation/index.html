@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <title>Record Design</title>
+    <style>
+        body{
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .title{
+            font-size:70px; 
+            margin-top: 10px;
+        }
+        header{
+            display:flex;
+            justify-content: space-between;
+            padding: 10px;
+            margin-top: 1rem;
+            border-bottom: 1px solid grey;
+            height:100px
+        }
+        .record-cd {
+            border-radius: 50%;
+            background: #000;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .record-cd > div {
+            border-radius: 50%;
+            width:40px;
+            height:40px;
+            background-color: yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div.some-text{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid;
+        }
+        .some-text > p {
+           padding: 15px; 
+        }
+        .some-text > p:nth-child(1){
+            border-right: 1px solid;
+        }
+
+        ol.disc{
+            list-style-type: none;
+            counter-reset: sc-c;
+        }
+        ol.disc li {
+            counter-increment: sc-c;
+        }
+        ol.disc li .section {
+            display: flex;
+            align-items: center;
+        }
+
+        li section{
+            margin-top: 30px;
+            display: flex;
+            width: 90%;
+            margin : 0 auto;
+        }
+        
+        li section div {
+            height:140px;
+            background-color: antiquewhite;
+            flex-grow: 1;
+        }
+        li section div:nth-child(1){
+            background-color: orangered;
+            flex-grow: 2;
+        }
+
+        li section div:nth-child(2){
+            background-color: aqua;
+            flex-grow: 1;
+        }
+
+        li section div:nth-child(4){
+            background-color: yellow;
+            flex-grow: 0.7;
+        }
+        li section div:nth-child(6){
+            background-color: purple;
+            flex-grow: 0.3;
+        }
+
+        li section div:nth-child(7){
+            background-color: burlywood;
+            flex-grow: 0.3;
+        }
+        li section div:nth-child(5){
+            background-color: pink;
+            flex-grow: 0.5;
+        }
+        li section div:nth-child(3){
+            background-color: green;
+            flex-grow: 0.9;
+        }
+        
+        li .cb {
+            background-color: #000;
+            width:50px;
+            height:50px;
+            text-align: center;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+        }
+
+        li .cb::before{
+            content:counter(sc-c);
+            color:white;
+            font-size: 30px;
+        }
+        .bar{
+            display: flex;
+            flex-direction: column;
+        }
+        .bar div{
+            width:80%;
+            background-color: red;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            height: 40px;
+        }
+        .bar div span{
+            padding-left: 20px;
+        }
+        .bar div:nth-child(1){
+            background-color: aqua;
+        }
+
+        .bar div:nth-child(2){
+            background-color: cadetblue;
+            width:30%;
+        }
+
+        .bar div:nth-child(3){
+            background-color: purple;
+            color:white;
+            width: 20%;
+        }
+        .bar div:nth-child(4){
+            background-color: chocolate;
+            width: 10%;
+        }
+        .bar div:nth-child(5){
+            background-color: aqua;
+            width: 8%;
+        }
+    </style>
+</head>
+
+<body>
+   <header>
+       <div class="record-cd">
+           <div>
+               <span>198</span>
+           </div>
+       </div>
+       <div>
+        <h1 class="title">Being Salty</h1>
+       </div>
+   </header> 
+   <section>
+       <div class="some-text">
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores doloremque culpa et, modi odio laudantium impedit eos enim qui illo a totam deleniti ipsum saepe distinctio. Vero dolores numquam cumque? ipsum dolor sit amet consectetur adipisicing elit. Maiores doloremque culpa et, modi odio laudantium impedit eos enim qui illo a totam deleniti ipsum saepe distinctio. Vero dolores numquam cumque?</p>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores doloremque culpa et, modi odio laudantium impedit eos enim qui illo a totam deleniti ipsum saepe distinctio. Vero dolores numquam cumque? ipsum dolor sit amet consectetur adipisicing elit. Maiores doloremque culpa et, modi odio laudantium impedit eos enim qui illo a totam deleniti ipsum saepe distinctio. Vero dolores numquam cumque?</p>
+       </div>
+   </section>
+   <section>
+    <ol class="disc">
+        <li>
+            <div class="section">
+                <div class="cb"></div>
+                <div> By Genre  </div> 
+            </div>
+
+            <section>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+         </li>
+         <li>
+            <div class="section">
+                <div class="cb"></div>
+                <div>By Country Of Origin</div> 
+            </div>
+            <div class="bar">
+                <div><span>Nepal</span></div>
+                <div><span>Madagascar</span></div>
+                <div><span>New Zealand</span></div>
+                <div><span>Australia</span></div>
+                <div><span>Germany</span></div>
+            </div>
+         </li>
+    </ol>
+   </section>
+</body>
+</html>
