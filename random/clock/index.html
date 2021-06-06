@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<style>
+    .container{
+        margin: 0 auto;
+        position: relative;
+        width:600px;
+        height:600px;
+        background: aqua;
+    }
+
+    .clock-hour-position{
+        width:50px;
+        height:300px;
+        background:red;
+        position:absolute;
+        left:275px;
+    }
+    .time {
+        text-align: center;
+    }
+    .time span{
+        font-size: 30px;
+    }
+    .circle {
+        border-radius: 50%;
+        width:500px;
+        height:500px;
+        position: absolute;
+        background-color:aqua;
+        left:50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+    .sui{
+        width:30px;
+        height:200px;
+        background:red;
+        position:absolute;
+        left:285px;
+        top: 100px;
+        z-index: 2;
+    }
+    .minute-sui{
+        background-color: blue;
+    }
+    .hour-sui{
+        background-color: beige;
+    }
+    .second-sui{
+        background-color: yellowgreen;
+        z-index: 5;
+    }
+    .circle-small{
+        width: 50px;
+        height:50px;
+        z-index: 6;
+        background-color: red;
+    }
+
+
+</style>
+<body>
+   <div class="container">
+       <div class="sui second-sui">
+       </div>
+       <div class="sui minute-sui">
+       </div>
+       <div class="sui hour-sui">
+       </div>
+       <div class="circle">
+       </div>
+
+       <div class="circle circle-small">
+       </div>
+        <div class="clock-hour-position">
+            <div class="time">
+                <span>1</span>
+            </div>
+        </div>
+        <div class="clock-hour-position">
+            <div class="time">
+                <span>1</span>
+            </div>
+        </div>
+        <div class="clock-hour-position">
+            <div class="time">
+                <span>1</span>
+            </div>
+        </div>
+        <div class="clock-hour-position">
+            <div class="time">
+                <span>1</span>
+            </div>
+        </div>
+        <div class="clock-hour-position">
+            <div class="time">
+                <span>1</span>
+            </div>
+        </div>
+        <div class="clock-hour-position">
+            <div class="time">
+                <span>1</span>
+            </div>
+        </div>
+        <div class="clock-hour-position">
+            <div class="time">
+                <span>1</span>
+            </div>
+        </div>
+        <div class="clock-hour-position">
+            <div class="time">
+                <span>1</span>
+            </div>
+        </div>
+        <div class="clock-hour-position">
+            <div class="time">
+                <span>1</span>
+            </div>
+        </div>
+        <div class="clock-hour-position">
+            <div class="time">
+                <span>1</span>
+            </div>
+        </div>
+        <div class="clock-hour-position">
+            <div class="time">
+                <span>1</span>
+            </div>
+        </div>
+        <div class="clock-hour-position">
+            <div class="time">
+                <span>1</span>
+            </div>
+        </div>
+   </div> 
+
+<script>
+    let ps = document.querySelectorAll('.clock-hour-position');
+    let pos = 0;
+    let time = 1;
+    for (const p of ps){
+        pos+=30;
+        p.style.transform = `rotate(${pos}deg)`;
+        p.style.transformOrigin = 'bottom center';
+        p.children[0].children[0].innerHTML= time;
+        time++;
+    }
+
+    function handler(className,type){
+        const  p = document.querySelector(className);
+        const d = new Date();
+        let angle = 0;
+        switch(type){
+            case 'second':
+                angle = d.getSeconds() * 6;
+                break;
+            case 'minute':
+                angle = d.getMinutes() * 6; 
+                break;
+            case 'hour':
+                angle = d.getHours() * 6;
+                break;
+        }
+        p.style.transform = `rotate(${angle}deg)`;
+        p.style.transformOrigin = 'bottom center';
+    }
+    setInterval(()=> {
+        handler('.second-sui','second');
+        handler('.minute-sui','minute');
+        handler('.hour-sui','hour');
+    },1000);
+
+</script>
+</body>
+</html>
